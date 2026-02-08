@@ -1,0 +1,263 @@
+/* Login.css */
+.login-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-blur-1 {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.bg-blur-2 {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.login-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.login-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.login-icon {
+  font-size: 32px;
+  color: white;
+}
+
+.login-title {
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.input-group-custom {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  z-index: 2;
+  color: #764ba2;
+  font-size: 18px;
+}
+
+.form-control-custom {
+  padding-left: 45px;
+  padding-right: 45px;
+  height: 50px;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.form-control-custom:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+  background: white;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  z-index: 2;
+  color: #764ba2;
+  padding: 8px;
+}
+
+.password-toggle:hover {
+  color: #667eea;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.remember-checkbox .form-check-input:checked {
+  background-color: #764ba2;
+  border-color: #764ba2;
+}
+
+.remember-checkbox .form-check-label {
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: #764ba2;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+.login-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.4);
+}
+
+.login-button:hover:not(:disabled) {
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.5);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+.divider span {
+  background: white;
+  padding: 0 15px;
+  color: #999;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.signup-text {
+  color: #666;
+  font-size: 15px;
+}
+
+.signup-link {
+  color: #764ba2;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.footer-note {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-card {
+    margin: 20px;
+  }
+  
+  .login-title {
+    font-size: 24px;
+  }
+  
+  .form-control-custom {
+    height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+  }
+  
+  .login-card {
+    margin: 10px;
+    border-radius: 16px;
+  }
+  
+  .login-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .login-icon {
+    font-size: 28px;
+  }
+  
+  .login-button {
+    padding: 12px;
+  }
+}
