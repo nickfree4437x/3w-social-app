@@ -26,12 +26,13 @@ A mini social post application built for 3W Business Solutions internship assign
 
 ## 📦 Local Setup
 ```bash
-git clone https://github.com/<your-username>/3w-social-app.git
+git clone https://github.com/nickfree4437x/3w-social-app.git
 cd 3w-social-app/backend
 npm install
 npm run dev
 cd ../frontend
 npm install
 npm run dev
+
 
 
