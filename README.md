@@ -3,8 +3,8 @@
 A mini social post application built for 3W Business Solutions internship assignment.
 
 ## 🚀 Live Demo
-- Frontend: https://<your-vercel-url>
-- Backend: https://<your-render-url>
+- Frontend: https://3w-social-app.vercel.app/
+- Backend: https://threew-social-app-jf3q.onrender.com
 
 ## ✨ Features
 - Signup & Login (email/password)
@@ -33,4 +33,5 @@ npm run dev
 cd ../frontend
 npm install
 npm run dev
+
 
