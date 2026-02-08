@@ -46,7 +46,7 @@ const PostCard = ({ post, onDeleted, onUpdated }) => {
       const token = localStorage.getItem("token") || sessionStorage.getItem("token");
       
       const res = await axios.post(
-        `http://localhost:5000/api/v1/posts/${post._id}/like`,
+        `https://threew-social-app-jf3q.onrender.com//v1/posts/${post._id}/like`,
         { username: user.username },
         {
           headers: {
@@ -82,7 +82,7 @@ const PostCard = ({ post, onDeleted, onUpdated }) => {
       const token = localStorage.getItem("token") || sessionStorage.getItem("token");
       
       const res = await axios.post(
-        `http://localhost:5000/api/v1/posts/${post._id}/comment`,
+        `https://threew-social-app-jf3q.onrender.com//v1/posts/${post._id}/comment`,
         { 
           username: user.username, 
           text: commentText.trim() 
@@ -125,7 +125,7 @@ const PostCard = ({ post, onDeleted, onUpdated }) => {
       const token = localStorage.getItem("token") || sessionStorage.getItem("token");
       
       const res = await axios.put(
-        `http://localhost:5000/api/v1/posts/${post._id}`,
+        `https://threew-social-app-jf3q.onrender.com//v1/posts/${post._id}`,
         { 
           userId: user.id, 
           text: editText.trim() 
@@ -161,7 +161,7 @@ const PostCard = ({ post, onDeleted, onUpdated }) => {
       setLoadingDelete(true);
       const token = localStorage.getItem("token") || sessionStorage.getItem("token");
       
-      await axios.delete(`http://localhost:5000/api/v1/posts/${post._id}`, {
+      await axios.delete(`https://threew-social-app-jf3q.onrender.com//v1/posts/${post._id}`, {
         data: { userId: user.id },
         headers: {
           Authorization: `Bearer ${token}`

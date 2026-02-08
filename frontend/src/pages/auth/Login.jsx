@@ -48,7 +48,7 @@ const Login = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
+        "https://threew-social-app-jf3q.onrender.com//v1/auth/login",
         form
       );
 
