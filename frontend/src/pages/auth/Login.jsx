@@ -46,13 +46,7 @@ const Login = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-<<<<<<< HEAD
-        "http://localhost:5000/api/v1/auth/login",
-=======
-        "https://threew-social-app-jf3q.onrender.com/auth/login",
->>>>>>> 8e89676742ef55009d885061ea2c75aa6efb3da9
-        form
+      const res = await axios.post("https://threew-social-app-jf3q.onrender.com/api/v1/auth/login",form
       );
 
       const storage = rememberMe ? localStorage : sessionStorage;

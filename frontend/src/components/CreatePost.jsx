@@ -65,7 +65,7 @@ const CreatePost = ({ onPostCreated }) => {
       const token = localStorage.getItem("token") || sessionStorage.getItem("token");
       
       const res = await axios.post(
-        "http://localhost:5000/api/v1/posts", 
+        "https://threew-social-app-jf3q.onrender.com/api/v1/posts", 
         formData,
         {
           headers: {
