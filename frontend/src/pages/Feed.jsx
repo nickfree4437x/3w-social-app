@@ -41,7 +41,7 @@ const Feed = () => {
       const token = localStorage.getItem("token") || sessionStorage.getItem("token");
       
       const res = await axios.get(
-        `https://threew-social-app-jf3q.onrender.com//v1/posts?page=${pageNo}&limit=5`,
+        `https://threew-social-app-jf3q.onrender.com/v1/posts?page=${pageNo}&limit=5`,
         {
           headers: {
             Authorization: `Bearer ${token}`
