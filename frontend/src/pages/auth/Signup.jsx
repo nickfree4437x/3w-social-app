@@ -67,7 +67,11 @@ const Signup = () => {
     try {
       setLoading(true);
 
+<<<<<<< HEAD
       await axios.post("http://localhost:5000/api/v1/auth/signup", form);
+=======
+      await axios.post("https://threew-social-app-jf3q.onrender.com/auth/signup", form);
+>>>>>>> 8e89676742ef55009d885061ea2c75aa6efb3da9
 
       toast.success("🎉 Account created successfully! Redirecting to login...");
       
