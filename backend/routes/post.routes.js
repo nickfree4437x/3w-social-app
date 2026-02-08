@@ -10,13 +10,22 @@ const {
 } = require("../controllers/post.controller");
 const upload = require("../middlewares/upload.middleware");
 
-router.post("/", upload.single("image"), createPost);
+// 👇 Wrap multer to catch errors nicely
+const uploadSingleImage = (req, res, next) => {
+  upload.single("image")(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({ message: err.message });
+    }
+    next();
+  });
+};
+
+router.post("/", uploadSingleImage, createPost);
 router.get("/", getPosts);
 
 router.post("/:postId/like", toggleLike);
 router.post("/:postId/comment", addComment);
 
-// Owner-only
 router.put("/:postId", editPost);
 router.delete("/:postId", deletePost);
 
