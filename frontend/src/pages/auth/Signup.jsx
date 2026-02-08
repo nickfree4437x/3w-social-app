@@ -68,7 +68,7 @@ const Signup = () => {
     try {
       setLoading(true);
 
-      await axios.post("https://threew-social-app-jf3q.onrender.com/v1/auth/signup", form);
+      await axios.post("https://threew-social-app-jf3q.onrender.com/auth/signup", form);
 
       toast.success("🎉 Account created successfully! Redirecting to login...", {
         position: "top-center",
@@ -321,7 +321,7 @@ const Signup = () => {
                         to="/" 
                         className="text-decoration-none fw-semibold"
                       >
-                        Sign In
+                        Log In
                       </Link>
                     </p>
                   </div>
